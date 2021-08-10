@@ -1,0 +1,32 @@
+﻿@page
+@model FlickrWebApplicationRazorPages.Pages.FlickrImagesModel
+@{
+}
+
+
+@*<p>@Model.Photos.Photos.Photo.Count()</p>
+<img src="@Model.urls[0]">*@
+
+<p>Images for @Model.Tag</p>
+<br/>
+
+@if(Model.urls.Count>0)
+{
+    <div class="row">
+    @foreach (var url in Model.urls)
+    {
+        <div class="col-md-2 border border-white">
+            <img src="@url">
+        </div>
+    }
+    </div>
+}
+else
+{
+    <p> No images found with tag @Model.Tag</p>
+}
+
+
+
+
+<script src="~/js/masonry.pkgd.min.js"></script>
