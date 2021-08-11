@@ -15,24 +15,23 @@ namespace FlickrWebApplicationRazorPages.Pages
         public String Tag { get; set; }
 
         public List<String> urls { get; set; }
+
         public async Task OnGet(string tag)
         {
             Tag = tag;
-            //ApiHelper.InitializeApiClient();
-            Photos = await FlickrService.GetImagesByTag(tag);
             urls = new List<string>();
 
+            Photos = await FlickrService.GetImagesByTag(tag);
             var allPhotos = Photos.Photos.Photo;
+
             foreach(var photo in allPhotos)
             {
-                var url = GetPhotoSourceUrl(photo);
+                var url = GetPhotoUrl(photo);
                 urls.Add(url);
             }
-
-            //call the api
         }
 
-        private String GetPhotoSourceUrl(PhotoDetails photo)
+        public String GetPhotoUrl(PhotoDetails photo)
         {
             return "https://live.staticflickr.com/" + photo.Server + "/" + photo.Id + "_" + photo.Secret + "_q.jpg";
         }

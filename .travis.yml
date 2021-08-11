@@ -1,5 +1,11 @@
 language: csharp
 mono: none
 dotnet: 5.0.100
+artifactsFolder="./artifacts"
+
+if [ -d $artifactsFolder ]; then
+  rm -R $artifactsFolder
+fi
+
 script:
  - dotnet restore
