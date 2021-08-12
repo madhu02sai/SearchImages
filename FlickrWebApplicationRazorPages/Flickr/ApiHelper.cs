@@ -13,9 +13,12 @@ namespace FlickrWebApplicationRazorPages.Flickr
 
         public static void InitializeApiClient()
         {
-            ApiClient = new HttpClient();
-            ApiClient.DefaultRequestHeaders.Accept.Clear();
-            ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            if(ApiClient == null)
+            {
+                ApiClient = new HttpClient();
+                ApiClient.DefaultRequestHeaders.Accept.Clear();
+                ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            }
         }
     }
 }

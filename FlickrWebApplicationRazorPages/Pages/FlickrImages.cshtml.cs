@@ -10,8 +10,6 @@ namespace FlickrWebApplicationRazorPages.Pages
 {
     public class FlickrImagesModel : PageModel
     {
-        public PhotosModel Photos { get; set; }
-
         public String Tag { get; set; }
 
         public List<String> urls { get; set; }
@@ -19,12 +17,21 @@ namespace FlickrWebApplicationRazorPages.Pages
         public async Task OnGet(string tag)
         {
             Tag = tag;
-            urls = new List<string>();
+            if(urls == null)
+            {
+                urls = new List<string>();
+            }
 
-            Photos = await FlickrService.GetImagesByTag(tag);
+            //ImageServiceOrchestrator imageServiceOrchestrator = new ImageServiceOrchestrator(new FlickrService(ApiHelper.ApiClient));
+            ////https://stackoverflow.com/questions/25174974/cast-a-taskt-to-a-t
+            //Task<PhotosModel> Photos = imageServiceOrchestrator.GetPhotos(tag);
+            //PhotosModel Photos2 = await Photos;
+            //var allPhotos = Photos2.Photos.Photo;
+
+            PhotosModel Photos = await FlickrService.GetImagesByTag(tag);
             var allPhotos = Photos.Photos.Photo;
 
-            foreach(var photo in allPhotos)
+            foreach (var photo in allPhotos)
             {
                 var url = GetPhotoUrl(photo);
                 urls.Add(url);
