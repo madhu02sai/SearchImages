@@ -359,3 +359,4 @@ C:\Users\mvemulam.ORADEV\source\repos\FlickrWebApplicationRazorPages\FlickrWebAp
 C:\Users\mvemulam.ORADEV\source\repos\FlickrWebApplicationRazorPages\FlickrWebApplicationRazorPages\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\mvemulam.ORADEV\source\repos\FlickrWebApplicationRazorPages\FlickrWebApplicationRazorPages\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\Users\mvemulam.ORADEV\source\repos\FlickrWebApplicationRazorPages\FlickrWebApplicationRazorPages\obj\Debug\net5.0\Razor\Pages\FlickrImages.cshtml.g.cs
+C:\Users\mvemulam.ORADEV\source\repos\FlickrWebApplicationRazorPages\FlickrWebApplicationRazorPages\bin\Debug\net5.0\Autofac.dll

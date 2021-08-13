@@ -25,6 +25,7 @@ namespace FlickrWebApplicationRazorPages
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddSingleton<ImageService, FlickrService>();
+            Configuration.GetConnectionString("FlickrKey");
             services.AddRazorPages();
         }
 

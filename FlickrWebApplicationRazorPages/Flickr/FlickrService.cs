@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -7,16 +8,14 @@ using System.Threading.Tasks;
 
 namespace FlickrWebApplicationRazorPages.Flickr
 {
-    public static class FlickrService
+    public class FlickrService : ImageServiceBase<PhotosModel>
     {
-        public static async Task<PhotosModel> GetImagesByTag(String tag = "")
+
+        public override async Task<PhotosModel> GetImagesByTag(string tag)
         {
             int imagesCount = 24;
-            String url = GenerateUrl(tag, imagesCount);
-            var requestMessage = new HttpRequestMessage(HttpMethod.Get, url)
-            {
-                Content = new StringContent("", Encoding.UTF8, "application/json")
-            };
+            string url = GenerateUrl(tag, imagesCount);
+            HttpRequestMessage requestMessage = GenerateRequestMessage(url);
 
             using (HttpResponseMessage response = await ApiHelper.ApiClient.SendAsync(requestMessage))
             {
@@ -32,9 +31,21 @@ namespace FlickrWebApplicationRazorPages.Flickr
             }
         }
 
-        private static String GenerateUrl(string tag, int imagesCount)
+        private HttpRequestMessage GenerateRequestMessage(string url)
         {
-            StringBuilder sb = new StringBuilder("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=7c754b5ddc905b529d922a6e45fdf486&tags=");
+            HttpRequestMessage requestMessage = new HttpRequestMessage(HttpMethod.Get, url)
+            {
+                Content = new StringContent("", Encoding.UTF8, "application/json")
+            };
+            return requestMessage;
+        }
+
+        private String GenerateUrl(string tag, int imagesCount)
+        {
+            var apiKey = Environment.GetEnvironmentVariable("FlickrApiKey");
+            StringBuilder sb = new StringBuilder("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=");
+            sb.Append(apiKey);
+            sb.Append("&tags=");
             sb.Append("'");
             sb.Append(tag);
             sb.Append("'");
@@ -43,6 +54,5 @@ namespace FlickrWebApplicationRazorPages.Flickr
             sb.Append("&sort=interestingness-desc&privacy_filter=1");
             return sb.ToString();
         }
-
     }
 }

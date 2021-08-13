@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OGhcWB4Hzl5TTiZG8JCb121TuplR4wBMif2JNeV9A/70OPsX6+RtJxfxCvmpdJiCUSQL5i894Rv5Qhc6+/gilw==",
+  "dgSpecHash": "osjNIo5eWqfdYhxP5H2iKRfd2QKhyDwh4nJdWvUr4oy1eh1SJ+vmgCcTmtyQ8LnnrGUWa3ZX/kx27IFulLGqpA==",
   "success": true,
   "projectFilePath": "C:\\Users\\mvemulam.ORADEV\\source\\repos\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages.Tests\\FlickrWebApplicationRazorPages.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
@@ -43,6 +44,7 @@
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\system.componentmodel.primitives\\4.3.0\\system.componentmodel.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\system.componentmodel.typeconverter\\4.3.0\\system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
+    "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\system.diagnostics.process\\4.3.0\\system.diagnostics.process.4.3.0.nupkg.sha512",
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\system.diagnostics.tracesource\\4.3.0\\system.diagnostics.tracesource.4.3.0.nupkg.sha512",

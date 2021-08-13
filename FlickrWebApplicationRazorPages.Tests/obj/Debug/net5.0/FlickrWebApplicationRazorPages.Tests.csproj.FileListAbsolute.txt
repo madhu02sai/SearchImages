@@ -430,3 +430,4 @@ C:\Users\mvemulam.ORADEV\source\repos\FlickrWebApplicationRazorPages\FlickrWebAp
 C:\Users\mvemulam.ORADEV\source\repos\FlickrWebApplicationRazorPages\FlickrWebApplicationRazorPages.Tests\obj\Debug\net5.0\ref\FlickrWebApplicationRazorPages.Tests.dll
 C:\Users\mvemulam.ORADEV\source\repos\FlickrWebApplicationRazorPages\FlickrWebApplicationRazorPages.Tests\obj\Debug\net5.0\FlickrWebApplicationRazorPages.Tests.pdb
 C:\Users\mvemulam.ORADEV\source\repos\FlickrWebApplicationRazorPages\FlickrWebApplicationRazorPages.Tests\obj\Debug\net5.0\FlickrWebApplicationRazorPages.Tests.genruntimeconfig.cache
+C:\Users\mvemulam.ORADEV\source\repos\FlickrWebApplicationRazorPages\FlickrWebApplicationRazorPages.Tests\bin\Debug\net5.0\Autofac.dll
