@@ -13,7 +13,7 @@ namespace FlickrWebApplicationRazorPages.Flickr
 
         public async Task<FlickrPhotosResult> GetPhotosByTag(string tag)
         {
-            int imagesCount = 24;
+            int imagesCount = 28;
             string url = GenerateUrl(tag, imagesCount);
             HttpRequestMessage requestMessage = GenerateRequestMessage(url);
 

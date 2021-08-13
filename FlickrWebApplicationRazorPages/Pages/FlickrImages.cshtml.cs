@@ -34,6 +34,7 @@ namespace FlickrWebApplicationRazorPages.Pages
                 PhotosModelResult = photoService.GetPhotosByTag(tag);
             }
 
+            //remove this
             //https://stackoverflow.com/questions/25174974/cast-a-taskt-to-a-t
             FlickrPhotosResult photosModel = await PhotosModelResult;
             var allPhotos = photosModel.Photos.Photo;
