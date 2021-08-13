@@ -7,8 +7,8 @@ namespace FlickrWebApplicationRazorPages.Flickr
 {
     public class PhotoDetails
     {
-        public String Id { get; set; }
-        public String Server { get; set; }
-        public String Secret { get; set; }
+        public string Id { get; set; }
+        public string Server { get; set; }
+        public string Secret { get; set; }
     }
 }

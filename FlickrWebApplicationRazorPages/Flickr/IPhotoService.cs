@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 
 namespace FlickrWebApplicationRazorPages.Flickr
 {
-    public abstract class ImageServiceBase<T>
+    public interface IPhotoService<T>
     {
-        public abstract Task<T> GetImagesByTag(string tag);
+        public Task<T> GetPhotosByTag(string tag);
 
     }
 }

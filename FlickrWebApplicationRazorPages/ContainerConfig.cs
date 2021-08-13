@@ -15,7 +15,7 @@ namespace FlickrWebApplicationRazorPages
 
             //builder.RegisterType<ImageServiceOrchstrator>().As<IImageServiceOrchstrator<PhotosModel>>();
             //builder.RegisterType<FlickrService>().As<ImageServiceBase<PhotosModel>();
-            builder.RegisterType(typeof(FlickrService)).As(typeof(ImageServiceBase<PhotosModel>));
+            builder.RegisterType(typeof(FlickrPhotoService)).As(typeof(IPhotoService<PhotosModel>));
 
             return builder.Build();
         }

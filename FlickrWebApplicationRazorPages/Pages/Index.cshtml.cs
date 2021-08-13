@@ -12,7 +12,7 @@ namespace FlickrWebApplicationRazorPages.Pages
     public class IndexModel : PageModel
     {
         [BindProperty]
-        public String Tag { get; set; }
+        public string Tag { get; set; }
 
         public void OnGet()
         {
@@ -22,8 +22,6 @@ namespace FlickrWebApplicationRazorPages.Pages
         public async Task<IActionResult> OnPost()
         {
             return Redirect("/FlickrImages?tag=" + Tag);
-            //return RedirectToPage("FlickrImages");
-            //return Page();
         }
     }
 }

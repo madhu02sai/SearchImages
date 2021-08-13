@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace FlickrWebApplicationRazorPages.Flickr
 {
-    public class FlickrService : ImageServiceBase<PhotosModel>
+    public class FlickrPhotoService : IPhotoService<PhotosModel>
     {
 
-        public override async Task<PhotosModel> GetImagesByTag(string tag)
+        public async Task<PhotosModel> GetPhotosByTag(string tag)
         {
             int imagesCount = 24;
             string url = GenerateUrl(tag, imagesCount);
@@ -40,19 +40,11 @@ namespace FlickrWebApplicationRazorPages.Flickr
             return requestMessage;
         }
 
-        private String GenerateUrl(string tag, int imagesCount)
+        private string GenerateUrl(string tag, int imagesCount)
         {
             var apiKey = Environment.GetEnvironmentVariable("FlickrApiKey");
-            StringBuilder sb = new StringBuilder("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=");
-            sb.Append(apiKey);
-            sb.Append("&tags=");
-            sb.Append("'");
-            sb.Append(tag);
-            sb.Append("'");
-            sb.Append("&format=json&nojsoncallback=1&per_page=");
-            sb.Append(imagesCount);
-            sb.Append("&sort=interestingness-desc&privacy_filter=1");
-            return sb.ToString();
+            return $"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={apiKey}&tags=" +
+                $"'{tag}'&format=json&nojsoncallback=1&per_page={imagesCount}&sort=interestingness-desc&privacy_filter=1";
         }
     }
 }
