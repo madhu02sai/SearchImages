@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X5fJCB9+f3/dzyWplNeOFgJzKnLr43rgiLKuhMait3T7aKqsxH59fHZWl1wUvkjYUusRM90qqKDucHxvnUmW4A==",
+  "dgSpecHash": "gNItybejEAGm17V7LYNv+x0yMVqoPB5+MxUFUP+XGuHNwPJTbernjNKnydxIXM2Jbipe1JGi8mZVs4UMiUNjZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mvemulam.ORADEV\\source\\repos\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages.csproj",
+  "projectFilePath": "C:\\Users\\mvemulam.ORADEV\\source\\repos\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages\\PhotosSearchWebApplicationRazorPages.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",

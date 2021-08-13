@@ -1,0 +1,22 @@
+﻿@page
+@model FlickrWebApplicationRazorPages.Pages.DisplayPhotosModel
+
+
+<p>Images for @Model.Tag</p>
+<br />
+
+@if (Model.urls.Count > 0)
+{
+    <div class="row">
+        @foreach (var url in Model.urls)
+        {
+            <div class="border border-white">
+                <img src="@url">
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p> No images found with tag @Model.Tag</p>
+}

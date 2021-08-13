@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
 
 namespace FlickrWebApplicationRazorPages.Flickr
 {
@@ -13,7 +9,7 @@ namespace FlickrWebApplicationRazorPages.Flickr
 
         public static void InitializeApiClient()
         {
-            if(ApiClient == null)
+            if (ApiClient == null)
             {
                 ApiClient = new HttpClient();
                 ApiClient.DefaultRequestHeaders.Accept.Clear();

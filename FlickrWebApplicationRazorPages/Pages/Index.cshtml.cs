@@ -1,11 +1,6 @@
 ﻿using FlickrWebApplicationRazorPages.Flickr;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FlickrWebApplicationRazorPages.Pages
 {
@@ -19,9 +14,9 @@ namespace FlickrWebApplicationRazorPages.Pages
             ApiHelper.InitializeApiClient();
         }
 
-        public async Task<IActionResult> OnPost()
+        public IActionResult OnPost()
         {
-            return Redirect("/FlickrImages?tag=" + Tag);
+            return Redirect("/DisplayPhotos?tag=" + Tag);
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "osjNIo5eWqfdYhxP5H2iKRfd2QKhyDwh4nJdWvUr4oy1eh1SJ+vmgCcTmtyQ8LnnrGUWa3ZX/kx27IFulLGqpA==",
+  "dgSpecHash": "vomAOED1QbI25jmp2F0sV1MUXg8lb2o7JpJMnwjYQ8hCLiPEtWu5x+cwgbb0IP1fipHkqGJB+I9ApV+MjLQZEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mvemulam.ORADEV\\source\\repos\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages.Tests\\FlickrWebApplicationRazorPages.Tests.csproj",
+  "projectFilePath": "C:\\Users\\mvemulam.ORADEV\\source\\repos\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages.Tests\\PhotosSearchWebApplicationRazorPages.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

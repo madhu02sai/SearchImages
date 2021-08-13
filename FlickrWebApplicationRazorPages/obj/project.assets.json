@@ -5987,9 +5987,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mvemulam.ORADEV\\source\\repos\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages.csproj",
-      "projectName": "FlickrWebApplicationRazorPages",
-      "projectPath": "C:\\Users\\mvemulam.ORADEV\\source\\repos\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages.csproj",
+      "projectUniqueName": "C:\\Users\\mvemulam.ORADEV\\source\\repos\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages\\PhotosSearchWebApplicationRazorPages.csproj",
+      "projectName": "PhotosSearchWebApplicationRazorPages",
+      "projectPath": "C:\\Users\\mvemulam.ORADEV\\source\\repos\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages\\PhotosSearchWebApplicationRazorPages.csproj",
       "packagesPath": "C:\\Users\\mvemulam.ORADEV\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\mvemulam.ORADEV\\source\\repos\\FlickrWebApplicationRazorPages\\FlickrWebApplicationRazorPages\\obj\\",
       "projectStyle": "PackageReference",

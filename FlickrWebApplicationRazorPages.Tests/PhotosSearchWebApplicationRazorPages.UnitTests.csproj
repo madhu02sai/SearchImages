@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FlickrWebApplicationRazorPages\FlickrWebApplicationRazorPages.csproj" />
+    <ProjectReference Include="..\FlickrWebApplicationRazorPages\PhotosSearchWebApplicationRazorPages.csproj" />
   </ItemGroup>
 
 </Project>

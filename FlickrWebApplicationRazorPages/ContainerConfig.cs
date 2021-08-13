@@ -1,9 +1,5 @@
 ﻿using Autofac;
 using FlickrWebApplicationRazorPages.Flickr;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FlickrWebApplicationRazorPages
 {
@@ -13,9 +9,7 @@ namespace FlickrWebApplicationRazorPages
         {
             var builder = new ContainerBuilder();
 
-            //builder.RegisterType<ImageServiceOrchstrator>().As<IImageServiceOrchstrator<PhotosModel>>();
-            //builder.RegisterType<FlickrService>().As<ImageServiceBase<PhotosModel>();
-            builder.RegisterType(typeof(FlickrPhotoService)).As(typeof(IPhotoService<FlickrPhotosResult>));
+            builder.RegisterType(typeof(FlickrPhotoService)).As(typeof(IPhotoService));
 
             return builder.Build();
         }

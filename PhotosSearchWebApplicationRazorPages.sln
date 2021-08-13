@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlickrWebApplicationRazorPages", "FlickrWebApplicationRazorPages\FlickrWebApplicationRazorPages.csproj", "{FE8F70E5-6B53-435F-B8E7-3D0017D464BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotosSearchWebApplicationRazorPages", "FlickrWebApplicationRazorPages\PhotosSearchWebApplicationRazorPages.csproj", "{FE8F70E5-6B53-435F-B8E7-3D0017D464BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlickrWebApplicationRazorPages.Tests", "FlickrWebApplicationRazorPages.Tests\FlickrWebApplicationRazorPages.Tests.csproj", "{BC004DDF-E841-4042-AE7F-B4D69AB09A3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotosSearchWebApplicationRazorPages.UnitTests", "FlickrWebApplicationRazorPages.Tests\PhotosSearchWebApplicationRazorPages.UnitTests.csproj", "{BC004DDF-E841-4042-AE7F-B4D69AB09A3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
