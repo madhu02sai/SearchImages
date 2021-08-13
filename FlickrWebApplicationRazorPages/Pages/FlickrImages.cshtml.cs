@@ -18,7 +18,7 @@ namespace FlickrWebApplicationRazorPages.Pages
 
         private IContainer container = ContainerConfig.Configure();
 
-        private Task<PhotosModel> PhotosModelResult;
+        private Task<FlickrPhotosResult> PhotosModelResult;
 
         public async Task OnGet(string tag)
         {
@@ -30,12 +30,12 @@ namespace FlickrWebApplicationRazorPages.Pages
 
             using (var scope = container.BeginLifetimeScope())
             {
-                var photoService = scope.Resolve<IPhotoService<PhotosModel>>();
+                var photoService = scope.Resolve<IPhotoService<FlickrPhotosResult>>();
                 PhotosModelResult = photoService.GetPhotosByTag(tag);
             }
 
             //https://stackoverflow.com/questions/25174974/cast-a-taskt-to-a-t
-            PhotosModel photosModel = await PhotosModelResult;
+            FlickrPhotosResult photosModel = await PhotosModelResult;
             var allPhotos = photosModel.Photos.Photo;
 
             foreach (var photo in allPhotos)
@@ -45,7 +45,7 @@ namespace FlickrWebApplicationRazorPages.Pages
             }
         }
 
-        public string GetPhotoUrl(PhotoDetails photo)
+        public string GetPhotoUrl(FlickrPhoto photo)
         {
             return $"https://live.staticflickr.com/{photo.Server}/{photo.Id}_{photo.Secret}_q.jpg";
         }

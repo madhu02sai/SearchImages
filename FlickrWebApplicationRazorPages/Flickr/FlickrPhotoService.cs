@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace FlickrWebApplicationRazorPages.Flickr
 {
-    public class FlickrPhotoService : IPhotoService<PhotosModel>
+    public class FlickrPhotoService : IPhotoService<FlickrPhotosResult>
     {
 
-        public async Task<PhotosModel> GetPhotosByTag(string tag)
+        public async Task<FlickrPhotosResult> GetPhotosByTag(string tag)
         {
             int imagesCount = 24;
             string url = GenerateUrl(tag, imagesCount);
@@ -21,7 +21,7 @@ namespace FlickrWebApplicationRazorPages.Flickr
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    PhotosModel photos = await response.Content.ReadAsAsync<PhotosModel>();
+                    FlickrPhotosResult photos = await response.Content.ReadAsAsync<FlickrPhotosResult>();
                     return photos;
                 }
                 else

@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace FlickrWebApplicationRazorPages.Flickr
 {
-    public class PhotoModel
+    public class FlickrPhotosResult
     {
-        public PhotoDetails[] Photo { get; set; }
+        public FlickrPhotosList Photos { get; set; }
     }
 }

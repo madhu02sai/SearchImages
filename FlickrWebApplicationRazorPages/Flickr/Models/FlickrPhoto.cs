@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FlickrWebApplicationRazorPages.Flickr
 {
-    public class PhotoDetails
+    public class FlickrPhoto
     {
         public string Id { get; set; }
         public string Server { get; set; }

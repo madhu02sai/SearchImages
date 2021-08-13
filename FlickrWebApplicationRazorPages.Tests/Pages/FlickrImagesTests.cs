@@ -15,7 +15,7 @@ namespace FlickrWebApplicationRazorPages.Tests.Pages
         public async Task GetPhotoUrl_WhenCalled_GivesCorrectUrl()
         {
             //Arrange
-            PhotoDetails photo = new PhotoDetails { Id = "49668662988", Secret = "f0dd701674", Server = "65535" };
+            FlickrPhoto photo = new FlickrPhoto { Id = "49668662988", Secret = "f0dd701674", Server = "65535" };
 
             //Act
             String url = new FlickrImagesModel().GetPhotoUrl(photo);

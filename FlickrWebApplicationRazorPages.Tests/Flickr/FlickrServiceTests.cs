@@ -46,8 +46,8 @@ namespace FlickrWebApplicationRazorPages.Tests.Flickr
             ApiHelper.ApiClient = httpClient;
 
             //Act
-            Task<PhotosModel> PhotosModelResult = new FlickrPhotoService().GetPhotosByTag(tag);
-            PhotosModel photosModel = await PhotosModelResult;
+            Task<FlickrPhotosResult> PhotosModelResult = new FlickrPhotoService().GetPhotosByTag(tag);
+            FlickrPhotosResult photosModel = await PhotosModelResult;
             var allPhotos = photosModel.Photos.Photo;
 
             //Assertions
