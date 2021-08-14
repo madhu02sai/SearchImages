@@ -16,11 +16,11 @@ namespace FlickrWebApplicationRazorPages.Tests.Flickr
     class FlickrPhotoServiceTests
     {
         private const string SendAsync = "SendAsync";
+        private const string tag = "RandomTag";
 
         [Test]
         public async Task GetPhotosListByTag_WhenFlickrServiceWorks_GivesCorrectResult()
         {
-            string tag = "randomTag";
             int photosCount = 10;
             StringBuilder content = new StringBuilder();
             content.Append("{\"photos\":{\"page\":1,\"pages\":172304,\"perpage\":");
@@ -66,10 +66,8 @@ namespace FlickrWebApplicationRazorPages.Tests.Flickr
         }
 
         [Test]
-        public async Task GetPhotosListByTag_WhenFlickrServiceFails_GivesCorrectResult()
+        public void GetPhotosListByTag_WhenFlickrServiceFails_GivesCorrectResult()
         {
-            string tag = "randomTag";
-
             // Create the response message
             HttpResponseMessage message = new HttpResponseMessage();
             message.StatusCode = System.Net.HttpStatusCode.NotFound;
@@ -106,7 +104,7 @@ namespace FlickrWebApplicationRazorPages.Tests.Flickr
         }
 
         [Test]
-        public async Task GetPhotoUrl_WhenCalled_GivesCorrectUrl()
+        public void GeneratePhotoUrl_WhenCalled_GivesCorrectUrl()
         {
             //Arrange
             FlickrPhoto photo = new FlickrPhoto { Id = "49668662988", Secret = "f0dd701674", Server = "65535" };
