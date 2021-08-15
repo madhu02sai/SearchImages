@@ -10,8 +10,7 @@ namespace FlickrWebApplicationRazorPages.Flickr
     {
         public async Task<List<string>> GetPhotosListByTag(string tag)
         {
-            int imagesCount = 28;
-            string url = GenerateFlickrPhotoServiceUrl(tag, imagesCount);
+            string url = GenerateFlickrPhotoServiceUrl(tag);
             HttpRequestMessage requestMessage = GenerateRequestMessage(url);
 
             using (HttpResponseMessage response = await ApiHelper.ApiClient.SendAsync(requestMessage))
@@ -50,10 +49,11 @@ namespace FlickrWebApplicationRazorPages.Flickr
             return requestMessage;
         }
 
-        private string GenerateFlickrPhotoServiceUrl(string tag, int imagesCount)
+        private string GenerateFlickrPhotoServiceUrl(string tag)
         {
-            var apiKey = Environment.GetEnvironmentVariable("FlickrApiKey");
-            return $"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={apiKey}&tags='{tag}'&format=json&nojsoncallback=1&per_page={imagesCount}&sort=interestingness-desc&privacy_filter=1";
+            var flickrApiKey = Environment.GetEnvironmentVariable("FlickrApiKey");
+            var photosCount = Environment.GetEnvironmentVariable("photosCount");
+            return $"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={flickrApiKey}&tags='{tag}'&format=json&nojsoncallback=1&per_page={photosCount}&sort=interestingness-desc&privacy_filter=1";
         }
 
     }
