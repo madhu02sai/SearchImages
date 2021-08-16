@@ -52,7 +52,6 @@ namespace FlickrWebApplicationRazorPages.Flickr
         private string GenerateFlickrPhotoServiceUrl(string tag)
         {
             var flickrApiKey = Environment.GetEnvironmentVariable("FlickrApiKey");
-            flickrApiKey = "wrongKey";
             var photosCount = Environment.GetEnvironmentVariable("photosCount");
             return $"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={flickrApiKey}&tags='{tag}'&format=json&nojsoncallback=1&per_page={photosCount}&sort=interestingness-desc&privacy_filter=1";
         }
