@@ -19,12 +19,6 @@ namespace FlickrWebApplicationRazorPages.Flickr
                 {
                     FlickrPhotosResult flickrPhotosResult = await response.Content.ReadAsAsync<FlickrPhotosResult>();
                     List<string> urls = new List<string>();
-                    if (flickrPhotosResult.Code != null && flickrPhotosResult.Code == 100)
-                    {
-                        //urls.Add(flickrPhotosResult.Code);
-                        urls.Add(flickrPhotosResult.Message);
-                        return urls;
-                    }
                     var allPhotos = flickrPhotosResult.Photos.Photo;
 
                     foreach (var photo in allPhotos)
