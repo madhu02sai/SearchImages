@@ -10,7 +10,7 @@ namespace FlickrWebApplicationRazorPages.Pages
     {
         public string Tag { get; set; }
 
-        public List<string> Urls { get; set; }
+        public List<string> PhotoUrls { get; set; }
 
         private readonly IContainer Container = ContainerConfig.Configure();
 
@@ -21,7 +21,7 @@ namespace FlickrWebApplicationRazorPages.Pages
             using (var scope = Container.BeginLifetimeScope())
             {
                 var photoService = scope.Resolve<IPhotoService>();
-                Urls = await photoService.GetPhotosListByTag(tag);
+                PhotoUrls = await photoService.GetPhotosListByTag(tag);
             }
         }
 

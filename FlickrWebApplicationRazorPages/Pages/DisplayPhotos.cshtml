@@ -5,10 +5,10 @@
 <p>Images for @Model.Tag</p>
 <br />
 
-@if (Model.Urls.Count > 0)
+@if (Model.PhotoUrls.Count > 0)
 {
     <div class="row">
-        @foreach (var url in Model.Urls)
+        @foreach (var url in Model.PhotoUrls)
         {
             <div class="border border-white">
                 <img src="@url">
