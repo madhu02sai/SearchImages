@@ -17,7 +17,6 @@ namespace FlickrWebApplicationRazorPages.Pages
         public async Task OnGet(string tag)
         {
             Tag = tag;
-
             using (var scope = Container.BeginLifetimeScope())
             {
                 var photoService = scope.Resolve<IPhotoService>();
